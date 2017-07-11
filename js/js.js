@@ -132,6 +132,7 @@ $("input[type='checkbox']").click(function(e) { //Calculates event total costs
 $("option[value='select_method']").hide();
 $("p:contains('the PayPal option')").hide();
 $("p:contains('the Bitcoin option')").hide();
+$('#credit-card').hide();
 
 $('#payment').change(function(){ //Shows payment options on click
   let value = $(this).val();
@@ -143,7 +144,8 @@ $('#payment').change(function(){ //Shows payment options on click
     });
     $('#cc-num').prop({
       disabled: true
-    });  
+    }); 
+    $('#credit-card').hide(); 
   } else if (value === 'bitcoin'){
     $("p:contains('the Bitcoin option')").show();
     $("p:contains('the PayPal option')").hide();
@@ -153,6 +155,7 @@ $('#payment').change(function(){ //Shows payment options on click
     $("button:contains('Register')").prop({
       disabled: false
     });
+    $('#credit-card').hide();
   }else{
     $("p:contains('the PayPal option')").hide();
     $("p:contains('the Bitcoin option')").hide();
@@ -164,6 +167,7 @@ $('#payment').change(function(){ //Shows payment options on click
     $('#cc-num').prop({
       disabled: false
     });      
+    $('#credit-card').show();
   }
 });
 
