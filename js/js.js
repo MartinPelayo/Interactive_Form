@@ -215,7 +215,6 @@ $("button:contains('Register')").click(function(e){
     });
   }
 
-
   if($('.card').is(':selected')){
     let val = $('#cc-num').val();
     let valLength = val.length;
@@ -225,8 +224,8 @@ $("button:contains('Register')").click(function(e){
         disabled: true
       });
     }else if(valLength > 13 && valLength < 16 && isNaN(val) === false){
-    $('#cc-num').css('border-color', 'white');
-  }
+      $('#cc-num').css('border-color', 'white');
+    }
   }
 
   let zipVal = $('#zip').val();
