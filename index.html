@@ -77,7 +77,7 @@
       </fieldset>
 
       <fieldset class="activities">
-        <legend>Register for Activities</legend>
+        <legend>Register for Activities<span></span></legend>
         <label><input type="checkbox" name="all"> Main Conference — $200</label>
         <label><input type="checkbox" name="js-frameworks"> JavaScript Frameworks Workshop — Tuesday 9am-12pm, $100</label>
         <label><input type="checkbox" name="js-libs"> JavaScript Libraries Workshop — Tuesday 1pm-4pm, $100</label>
@@ -91,12 +91,12 @@
       <fieldset>
         <legend>Payment Info</legend>
 
-        <label for="payment">I'm going to pay with:</label>
+        <label for="payment">I'm going to pay with:<span></span></label>
         <select id="payment" name="user_payment">
-          <option value="select_method">Select Payment Method</option>
-          <option value="credit card">Credit Card</option>
-          <option value="paypal">PayPal</option>
-          <option value="bitcoin">Bitcoin</option>
+          <option class="default" value="select_method">Select Payment Method</option>
+          <option class="card" value="credit card">Credit Card</option>
+          <option class="paypal" value="paypal">PayPal</option>
+          <option class="bitcoin" value="bitcoin">Bitcoin</option>
         </select>
 
         <div id="credit-card" class="credit-card">
